@@ -31,7 +31,7 @@ class ResetPasswordController extends Controller
      * Create a new controller instance.
      *
      * @return void
-     */
+     */submitScheme
     public function __construct()
     {
         $this->middleware('guest');
