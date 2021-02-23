@@ -10,8 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/','/products')->name('root');
+Route::get('products','ProductsController@index')->name('products.index');
 
-Route::get('/', 'PagesController@root')->name('root');
+//Route::get('/', 'PagesController@root')->name('root');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/email_verification/send', 'EmailVerificationController@send')->name('email_verification.send');
